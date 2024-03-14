@@ -1,0 +1,11 @@
+@for ( cats of cats$ | async; track $index; let e = $even; ) {
+{{$index}}
+<ul accesskey="$index" [ngClass]="getClassForContainer(e)">
+    @for (cat of cats; track $index;) {
+    <li accesskey="$index" class="grid-item">
+        {{$index + 1}}
+        <app-cat-card [cat]="cat" />
+    </li>
+    }
+</ul>
+}

@@ -1,0 +1,45 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)" class="flex flex-col  gap-2">
+  <div class="input-box">
+    <label for="firstName">First name</label>
+    <input type="text" id="firstName" formControlName="firstName" class="border-2 border-green-500" [ngClass]="{
+    'border-red-500' : myForm.get('firstName')?.touched && !myForm.get('firstName')?.valid}">
+    @if (myForm.get('firstName')?.dirty && myForm.get('firstName')?.errors) {
+    <div class="error text-red-800">
+      {{ formErrors.firstName }}
+    </div>
+    }
+  </div>
+
+  <div class="input-box">
+    <label for="lastName">Last name</label>
+    <input type="text" id="lastName" formControlName="lastName" class="border-2 border-green-500" [ngClass]="{
+    'border-red-500' : myForm.get('lastName')?.touched &&  !myForm.get('lastName')?.valid
+    }">
+    @if (myForm.get('lastName')?.dirty && myForm.get('lastName')?.errors) {
+    <div class="error text-red-800">
+      {{ formErrors.lastName }}
+    </div>
+    }
+  </div>
+
+  <div class="input-box">
+    <label for="email">Email</label>
+    <input type="text" id="email" formControlName="email" class="border-2 border-green-500" [ngClass]="{
+    'border-red-500' : myForm.get('email')?.touched &&  !myForm.get('email')?.valid
+    }">
+    @if (myForm.get('email')?.dirty && myForm.get('email')?.errors) {
+    <div class="error text-red-800">
+      {{ formErrors.email }}
+    </div>
+    }
+  </div>
+
+
+
+  <button type="submit" [disabled]="myForm.invalid"
+    class="disabled:bg-gray-50   bg-sky-500 p-3.5 flex justify-self-center border-2 rounded-2xl  border-amber-400 m-auto">
+    Submit
+  </button>
+
+
+</form>

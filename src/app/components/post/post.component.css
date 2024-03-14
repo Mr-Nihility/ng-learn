@@ -1,0 +1,16 @@
+
+
+.post-card{
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 10px;
+}
+button{
+    background-color:rgb(17, 172, 172);
+    margin: 20px auto;
+    padding: 10px;
+    color: whitesmoke;
+    border-radius: 10px;
+    outline-style: none;
+    border: none;
+}

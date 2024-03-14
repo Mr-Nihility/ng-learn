@@ -1,0 +1,26 @@
+.post-box {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.main {
+    display: flex;
+    margin: 0 auto;
+
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.left-side {
+    flex-grow: 1;
+    width: 50%;
+    padding-left: 40px;
+}
+
+.right-side {
+    flex-grow: 1;
+    width: 50%;
+    overflow-y: auto;
+
+}

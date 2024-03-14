@@ -1,0 +1,39 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "vertical . ."
+        "vertical large large"
+        ". large large";
+    ;
+    grid-gap: 20px;
+
+
+}
+
+.grid-container :nth-child(1) {
+    grid-area: vertical;
+}
+
+.grid-container :nth-child(4) {
+    grid-area: large;
+}
+
+.reverse {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        ". . vertical"
+        "large large vertical"
+        "large large .";
+    ;
+    grid-gap: 20px;
+}
+
+.reverse :nth-child(3) {
+    grid-area: vertical;
+}
+
+.reverse :nth-child(4) {
+    grid-area: large;
+}

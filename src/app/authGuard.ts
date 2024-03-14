@@ -1,6 +1,7 @@
 import { ActivatedRouteSnapshot, CanActivateFn, RouterStateSnapshot } from "@angular/router";
+import { inject } from "@angular/core";
+import { AuthService } from "./services/auth/auth.service";
 
-export const AuthGuad: CanActivateFn = async (route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Promise<boolean> => {
-  console.log(route, state)
-  return false
+export const AuthGuard: CanActivateFn = async (route: ActivatedRouteSnapshot, state: RouterStateSnapshot)  => {
+  return inject(AuthService).isLoggedIn;
 }

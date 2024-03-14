@@ -1,0 +1,12 @@
+.box {
+    margin: 30px;
+    border-radius: 20px;
+    background: #FBE0DC;
+    min-width: calc(100% - 30px*2);
+    min-height: calc(100% - 30px*2);
+    background-image: url(../../../assets/girl-and-pet.png);
+    background-position: 50% 50%;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

@@ -1,0 +1,21 @@
+<div class="flex justify-between w-svw">
+  <div class="flex">
+    <a routerLink="/home" routerLinkActive="bg-sky-600 text-blue-50" [routerLinkActiveOptions]="{ exact: true }" class="block p-2 rounded-2xl"> Home</a>
+    <a routerLink="/login" routerLinkActive="bg-sky-600 text-blue-50" [routerLinkActiveOptions]="{ exact: true }" class="block p-2 rounded-2xl"> Login</a>
+  </div>
+  <div class="flex">
+    <button
+      (click)="onLogInClick()"
+      type="button"
+      class="disabled:bg-gray-50   bg-sky-500 p-3.5 flex justify-self-center border-2 rounded-2xl  border-amber-400 m-auto">
+      Login
+    </button>
+    <button
+      (click)="onLogOutClick()"
+      type="button"
+      class="disabled:bg-gray-50   bg-sky-500 p-3.5 flex justify-self-center border-2 rounded-2xl  border-amber-400 m-auto">
+      Logout
+    </button>
+  </div>
+
+</div>

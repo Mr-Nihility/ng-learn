@@ -1,0 +1,12 @@
+<div class="post-card">
+    <h3>UserName: {{user.userName}}</h3>
+    <p> First name: {{user.firstName}}</p>
+    <p> Last name: {{user.lastName}}</p>
+    <p> Age: {{user.age}}</p>
+    <p> Bio: {{user.bio}}</p>
+    @if(user.hobby){
+    <p> Hobby: {{user.hobby}}</p>
+    }
+
+    <button (click)="onClick($event)"> see more...</button>
+</div>
